@@ -1,0 +1,8 @@
+
+[character]
+success_symbol = "[❯](white)"
+error_symbol = "[❯](red)"
+vicmd_symbol = "[❮](green)"
+
+[directory]
+style = 'bold white'
