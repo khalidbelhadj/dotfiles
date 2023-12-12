@@ -1,3 +1,1 @@
-$DOTFILES/nvchad/init.lua=$HOME/.config/nvchad/init.lua
-$DOTFILES/nvchad/lua=$HOME/.config/nvchad/lua
-$DOTFILES/nvchad/.stylua.toml=$HOME/.config/nvchad/.stylua.toml
+$DOTFILES/nvchad=$HOME/.config/nvchad

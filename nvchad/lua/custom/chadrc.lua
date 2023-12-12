@@ -5,8 +5,12 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "jellybeans",
-  theme_toggle = { "jellybeans", "one_light" },
+  tabufline = {
+    enabled = false
+  },
+
+  theme = "fleet",
+  theme_toggle = { "fleet", "one_light" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
@@ -16,6 +20,38 @@ M.ui = {
     style = "atom",
   },
 
+  nvdash = {
+    load_on_startup = true,
+    buttons = {
+      { "  Find File", "Spc f f", "Telescope find_files" },
+      { "󰈚  Recent Files (cwd)", "Spc f r", "Telescope oldfiles" },
+      { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
+      { "  Bookmarks", "Spc m a", "Telescope marks" },
+      { "  Themes", "Spc t h", "Telescope themes" },
+      { "  Mappings", "Spc c h", "NvCheatsheet" },
+    },
+  },
+
+  telescope = {
+    -- style = "bordered"
+  },
+
+  -- statusline = {
+  --   overriden_modules = function(modules)
+  --     table.insert(
+  --       modules,
+  --       5,
+  --       (function()
+  --         local word_count = vim.fn.wordcount()
+  --         if (word_count.visual_words ~= nil) then
+  --           return tostring(word_count.visual_words) .. ' words selected'
+  --         end
+  --         return tostring(word_count.words) .. ' words'
+  --       end
+  --       )()
+  --     )
+  --   end,
+  -- },
 }
 
 M.plugins = "custom.plugins"
