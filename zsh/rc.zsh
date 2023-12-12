@@ -1,22 +1,24 @@
-TERM='alacritty'
+eval "$(starship init zsh)"
 
 source_if_exists () {
     if test -r "$1"; then
         source "$1"
     else
-        echo "Could not source file $1"
+        echo "Could not source file $1, does not exist"
     fi
 }
 
 source_if_exists $HOME/.env.sh
+source_if_exists $HOME/.tokens.sh
 source_if_exists $DOTFILES/zsh/aliases.zsh
 source_if_exists $DOTFILES/zsh/nvim-selector.zsh
+source_if_exists $DOTFILES/zsh/lazy.zsh
+source_if_exists $DOTFILES/zsh/journal.zsh
 
 setopt nobeep autocd
 export LSCOLORS=ExfxcxdxBxegedabagacad
 export CLICOLOR=1
 export BAT_THEME="OneHalfDark"
-export PATH="$HOME/.emacs.d/bin/:$PATH"
 
 # Autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -30,11 +32,7 @@ zstyle ':completion:*' list-suffixes
 zstyle ':completion:*' expand prefix suffix
 zstyle ':completion*' menu select
 zstyle ':completion*' list-colours ${(s.:.)LS_COLORS}
-eval "$(gh completion -s zsh)" # Enable completion for github cli 
-
-source "$HOME/.cargo/env"
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
+eval "$(gh completion -s zsh)" # Enable completion for github cli
 
 vterm_printf() {
     if [ -n "$TMUX" ] && ([ "${TERM%%-*}" = "tmux" ] || [ "${TERM%%-*}" = "screen" ]); then
@@ -55,12 +53,5 @@ vterm_prompt_end() {
 setopt PROMPT_SUBST
 PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-[ -f "/Users/khalidbelhadj/.ghcup/env" ] && source "/Users/khalidbelhadj/.ghcup/env" # ghcup-env
-
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export PATH="/usr/local/texlive/2023basic/bin/universal-darwin:$PATH"
+TERM=xterm-256color

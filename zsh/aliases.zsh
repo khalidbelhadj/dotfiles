@@ -1,13 +1,9 @@
-alias lsa="ls -lah"
-alias l="ls -1"
-alias ll="ls -lh"
-alias la="ls -lAh"
+alias l="exa -lh --sort type"
+alias la="exa -lah --icons --sort type"
 alias nv="nvim"
-alias nvv="nvim ~/.config/nvim/"
 alias config="cd ~/.config/"
 alias c="clear"
 alias obsidian="cd /Users/khalidbelhadj/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Khalid\'s\ Vault"
-alias wpm="python3 ~/Desktop/Developer/wpm/wpm.py"
 alias bintodec="python3 ~/Desktop/Programming/Python/byte_to_dec.py"
 alias em="emacsclient -nw"
 alias python="python3"
@@ -19,3 +15,14 @@ alias lvim="~/.local/bin/lvim"
 alias emacs29="/usr/local/Cellar/emacs-plus@29/29.0.90/bin/emacs"
 alias rm="trash"
 alias remove="rm"
+alias at="tmux attach -t"
+alias u="cd .."
+alias chrome="open -a 'Google Chrome'"
+alias notes="cd ~/iCloud/iCloud~md~obsidian/Documents/Notes/"
+# alias base="cd '$(git rev-parse --show-toplevel)'"
+
+function zoxide_and_nvim() {
+  z "$1" && nvim
+}
+
+alias n="zoxide_and_nvim"

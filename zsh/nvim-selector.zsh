@@ -2,7 +2,7 @@
 export NVIM_APPNAME="nvchad"
 
 function nvims() {
-  items=("LazyVim" "default" "nvim-personal" "nvchad" "nvchaddefault")
+  items=("nvim" "LazyVim" "nvim-personal" "default" "nvchad")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
