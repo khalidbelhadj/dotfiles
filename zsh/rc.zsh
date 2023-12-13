@@ -13,7 +13,6 @@ source_if_exists $HOME/.tokens.sh
 source_if_exists $DOTFILES/zsh/aliases.zsh
 source_if_exists $DOTFILES/zsh/nvim-selector.zsh
 source_if_exists $DOTFILES/zsh/lazy.zsh
-source_if_exists $DOTFILES/zsh/journal.zsh
 
 setopt nobeep autocd
 export LSCOLORS=ExfxcxdxBxegedabagacad
