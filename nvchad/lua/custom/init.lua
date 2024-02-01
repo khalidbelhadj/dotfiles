@@ -2,7 +2,8 @@ vim.cmd("autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatopt
 
 vim.opt.pumheight = 15
 vim.opt.autochdir = false
-vim.opt.listchars:append({space = "·"})
+vim.opt.scrolloff = 8
+vim.opt.listchars:append({ space = "·" })
 
 -- Hightlight on yank
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -18,3 +19,12 @@ vim.api.nvim_create_user_command('Hex', '%!xxd', {})
 vim.api.nvim_create_user_command('UnHex', '%!xxd -r', {})
 vim.api.nvim_create_user_command('UnHex', '%!xxd -r', {})
 
+
+vim.cmd("autocmd BufNewFile,BufRead *.frag setfiletype glsl")
+vim.cmd("autocmd BufNewFile,BufRead *.vert setfiletype glsl")
+
+vim.cmd("autocmd BufNewFile,BufRead *.zsh setfiletype sh")
+
+vim.g.copilot_no_tab_map = true
+vim.g.copilot_assume_mapped = true
+vim.g.copilot_tab_fallback = ""

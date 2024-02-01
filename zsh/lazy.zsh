@@ -27,6 +27,21 @@ pip3() {
   pip3 "$@"
 }
 
+# for pyright lsp
+nvim() {
+  unset -f nvim
+  pyenv-init
+  nvim "$@"
+}
+
+# Github
+
+gh() {
+  unset -f gh
+  eval "$(gh completion -s zsh)"
+  gh "$@"
+}
+
 # JavaScript
 
 load-javascript() {

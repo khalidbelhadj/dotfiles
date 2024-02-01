@@ -11,14 +11,22 @@ M.override = {
   },
   -- Only apply to the fleet theme
   -- Macro = { fg = "green" },
-  -- ["@operator"] = { fg = "pink" },
-  -- ["@function"] = { fg="yellow",  italic = true, bold = true },
-  -- ["@method"] = { fg="yellow",  italic = true, bold = false },
+  ["@function"] = { fg="yellow",  italic = true, bold = true },
+  ["@function.call"] = { fg="yellow",  italic = true, bold = true },
+  ["@method.call"] = { fg="yellow",  italic = true, bold = true },
+  ["@type.builtin"] = { fg="blue",  italic = true, bold = false },
+  ["@variable"] = { fg="white",  italic = true, bold = false },
+  ["@character"] = { fg="pink",  italic = true },
   IndentBlanklineContextStart = { bg = "lighter_black" },
   NvimTreeGitDirty = { fg = "yellow"},
   NvimTreeGitNew = { fg = "green"},
   NvimTreeGitIgnored = { fg = "gray"},
   NvimTreeGitDeleted = { fg = "red"},
+  Tag = { fg = "cyan"},
+  Type = { fg = "blue", italic=true},
+  Macro = {fg = "green"},
+  Repeat = {fg = "blue"},
+  DevIconpy = {fg = "yellow"},
 }
 
 ---@type HLTable

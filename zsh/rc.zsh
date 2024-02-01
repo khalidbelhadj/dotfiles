@@ -31,7 +31,6 @@ zstyle ':completion:*' list-suffixes
 zstyle ':completion:*' expand prefix suffix
 zstyle ':completion*' menu select
 zstyle ':completion*' list-colours ${(s.:.)LS_COLORS}
-eval "$(gh completion -s zsh)" # Enable completion for github cli
 
 vterm_printf() {
     if [ -n "$TMUX" ] && ([ "${TERM%%-*}" = "tmux" ] || [ "${TERM%%-*}" = "screen" ]); then
@@ -53,4 +52,11 @@ setopt PROMPT_SUBST
 PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
 
 export PATH="/usr/local/texlive/2023basic/bin/universal-darwin:$PATH"
-TERM=xterm-256color
+TERM=alacritty
+
+# bun completions
+[ -s "/Users/khalidbelhadj/.bun/_bun" ] && source "/Users/khalidbelhadj/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
