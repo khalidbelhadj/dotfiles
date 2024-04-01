@@ -30,7 +30,6 @@ pip3() {
 # for pyright lsp
 nvim() {
   unset -f nvim
-  pyenv-init
   nvim "$@"
 }
 
@@ -45,12 +44,12 @@ gh() {
 # JavaScript
 
 load-javascript() {
-# pnpm
-export PNPM_HOME="/Users/khalidbelhadj/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+  # pnpm
+  export PNPM_HOME="/Users/khalidbelhadj/Library/pnpm"
+  case ":$PATH:" in
+    *":$PNPM_HOME:"*) ;;
+    *) export PATH="$PNPM_HOME:$PATH" ;;
+  esac
 
   # bun
   export BUN_INSTALL="$HOME/.bun"
@@ -58,9 +57,10 @@ esac
   # bun completions
   [ -s "/Users/khalidbelhadj/.bun/_bun" ] && source "/Users/khalidbelhadj/.bun/_bun"
 
+  # for m1 mac
   export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+  [ -s $HOMEBREW_PREFIX"/opt/nvm/nvm.sh" ] && \. $HOMEBREW_PREFIX"/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s $HOMEBREW_PREFIX"/opt/nvm/etc/bash_completion.d/nvm" ] && \. $HOMEBREW_PREFIX"/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 }
 
 nvm() {

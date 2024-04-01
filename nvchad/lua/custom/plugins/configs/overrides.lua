@@ -2,7 +2,6 @@ local overrides = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
-      ensure_installed = "all",
       indent           = {
         enable = true,
       },

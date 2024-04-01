@@ -22,6 +22,9 @@ yellow = "0xe5c995"
 background = "0x151515"
 foreground = "0xffffff"
 
+[colors.cursor]
+cursor = "0xffffff"
+
 [env]
 TERM = "xterm-256color"
 
@@ -159,9 +162,9 @@ mode = "~Search"
 mods = "Command"
 
 [window]
-decorations = "buttonless"
+# decorations = "buttonless"
 option_as_alt = "Both"
-opacity = 0.999999
+# opacity = 0.999999
 
 [window.dimensions]
 columns = 125

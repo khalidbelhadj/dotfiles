@@ -10,7 +10,7 @@ M.override = {
     italic = true,
   },
   -- Only apply to the fleet theme
-  -- Macro = { fg = "green" },
+  Macro = { fg = "green" },
   ["@function"] = { fg="yellow",  italic = true, bold = true },
   ["@function.call"] = { fg="yellow",  italic = true, bold = true },
   ["@method.call"] = { fg="yellow",  italic = true, bold = true },
@@ -31,7 +31,7 @@ M.override = {
 
 ---@type HLTable
 M.add = {
-  NvimTreeOpenedFolderName = { fg = "green", bold = true },
+  -- NvimTreeOpenedFolderName = { fg = "green", bold = true },
 }
 
 return M

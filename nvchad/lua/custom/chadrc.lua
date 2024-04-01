@@ -36,22 +36,22 @@ M.ui = {
     style = "bordered"
   },
 
-  statusline = {
-    overriden_modules = function(modules)
-      table.insert(
-        modules,
-        5,
-        (function()
-          local word_count = vim.fn.wordcount()
-          if (word_count.visual_words ~= nil) then
-            return tostring(word_count.visual_words) .. ' words selected'
-          end
-          return tostring(word_count.words) .. ' words'
-        end
-        )()
-      )
-    end,
-  },
+  -- statusline = {
+  --   overriden_modules = function(modules)
+  --     table.insert(
+  --       modules,
+  --       5,
+  --       (function()
+  --         local word_count = vim.fn.wordcount()
+  --         if (word_count.visual_words ~= nil) then
+  --           return tostring(word_count.visual_words) .. ' words selected'
+  --         end
+  --         return tostring(word_count.words) .. ' words'
+  --       end
+  --       )()
+  --     )
+  --   end,
+  -- },
 }
 
 M.plugins = "custom.plugins"

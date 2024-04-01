@@ -1,5 +1,5 @@
-alias l="exa -lh --sort type"
-alias la="exa -lah --icons --sort type"
+# alias l="exa -lh --sort type"
+# alias la="exa -lah --icons --sort type"
 alias nv="nvim"
 alias config="cd ~/.config/"
 alias c="clear"
@@ -13,13 +13,11 @@ alias todo="~/today.sh"
 alias doom="~/.config/emacs/bin/doom"
 alias lvim="~/.local/bin/lvim"
 alias emacs29="/usr/local/Cellar/emacs-plus@29/29.0.90/bin/emacs"
-alias rm="trash"
-alias remove="rm"
 alias at="tmux attach -t"
 alias u="cd .."
 alias chrome="open -a 'Google Chrome'"
-alias notes="cd ~/iCloud/iCloud~md~obsidian/Documents/Notes/"
-# alias base="cd '$(git rev-parse --show-toplevel)'"
+alias cls="clear"
+alias rm="rm -i"
 
 function zoxide_and_nvim() {
   z "$1" && nvim

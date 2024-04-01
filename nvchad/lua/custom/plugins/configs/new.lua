@@ -71,14 +71,14 @@ local new = {
     end,
   },
 
-  {
-    "f-person/git-blame.nvim",
-    event = { "BufEnter" },
-    config = function()
-      vim.g.gitblame_enabled = 0
-      vim.g.gitblame_delay = 1000
-    end,
-  },
+  -- {
+  --   "f-person/git-blame.nvim",
+  --   event = { "BufEnter" },
+  --   config = function()
+  --     vim.g.gitblame_enabled = 0
+  --     vim.g.gitblame_delay = 1000
+  --   end,
+  -- },
 
   {
     "tpope/vim-fugitive",
@@ -181,6 +181,9 @@ local new = {
   },
   {
     "mfussenegger/nvim-dap",
+    dependencies = {
+      "nvim-neotest/nvim-nio"
+    },
     lazy = false,
     config = function()
       local dap = require('dap')
@@ -196,7 +199,7 @@ local new = {
         },
       }
 
-      dap.adapters.python = function(cb, config)
+      dap.adapters.python = function(cb, _)
         cb({
           type = 'executable',
           command = 'python3',
