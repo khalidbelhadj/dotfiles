@@ -1,9 +1,12 @@
-eval "$(/opt/homebrew/bin/brew shellenv)"
-# eval "$(starship init zsh)"
+# negate this test
+if ! test ${HOMEBREW_PREFIX+defined}; then
+  HOMEBREW_PREFIX="/usr/local/";
+fi
+
+eval "$(${HOMEBREW_PREFIX}bin/brew shellenv)"
+eval "$(starship init zsh)"
 
 setopt nobeep autocd
-# export LSCOLORS=ExfxcxdxBxegedabagacad
-# export CLICOLOR=1
 
 # Autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -39,7 +42,6 @@ try_source_quiet () {
         source "$1"
     fi
 }
-
 
 try_source $HOME/.env.sh
 try_source $DOTFILES/zsh/aliases.zsh
