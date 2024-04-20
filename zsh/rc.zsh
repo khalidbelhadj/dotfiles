@@ -1,33 +1,30 @@
-# negate this test
-if ! test ${HOMEBREW_PREFIX+defined}; then
-  HOMEBREW_PREFIX="/usr/local/";
+
+if [ -d "/opt/homebrew/" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+  eval "$(/usr/local/bin/brew shellenv)"
+  HOMEBREW_PREFIX="/usr/local/"
 fi
 
-eval "$(${HOMEBREW_PREFIX}bin/brew shellenv)"
 eval "$(starship init zsh)"
 
 setopt nobeep autocd
 
-# Autosuggestions
+# autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept
 
-# Tab completion
+# tab completion
 autoload -Uz compinit && compinit
 bindkey '^[[Z' reverse-menu-complete
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*' list-suffixes
 zstyle ':completion:*' expand prefix suffix
 zstyle ':completion*' menu select
-zstyle ':completion*' list-colours ${(s.:.)LS_COLORS}
+zstyle ':completion*' list-colours "${(s.:.)LS_COLORS}"
 
 # latex
 export PATH="/usr/local/texlive/2023basic/bin/universal-darwin:$PATH"
-
-# bun
-[ -s "/Users/khalidbelhadj/.bun/_bun" ] && source "/Users/khalidbelhadj/.bun/_bun"
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 # other
 try_source () {

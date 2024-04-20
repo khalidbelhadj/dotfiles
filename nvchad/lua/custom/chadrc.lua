@@ -33,7 +33,7 @@ M.ui = {
   },
 
   telescope = {
-    style = "bordered"
+    -- style = "bordered"
   },
 
   -- statusline = {

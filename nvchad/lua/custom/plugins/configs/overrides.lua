@@ -84,7 +84,7 @@ local overrides = {
 
   {
     "NvChad/nvim-colorizer.lua",
-    enabled = true,
+    enabled = false,
     opts = {
       user_default_options = {
         tailwind = "both",
