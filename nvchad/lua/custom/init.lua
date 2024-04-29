@@ -28,7 +28,9 @@ vim.cmd("autocmd BufNewFile,BufRead *.zsh setfiletype sh")
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
 vim.g.copilot_tab_fallback = ""
+vim.g.cmdheight = 0
 
 -- Transparent background
 vim.api.nvim_set_hl(0, "Normal", { bg = "none"})
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none"})
+

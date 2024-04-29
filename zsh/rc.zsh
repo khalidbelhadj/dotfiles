@@ -1,3 +1,4 @@
+# zmodload zsh/zprof
 
 if [ -d "/opt/homebrew/" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -42,6 +43,9 @@ try_source_quiet () {
 
 try_source $HOME/.env.sh
 try_source $DOTFILES/zsh/aliases.zsh
-try_source $DOTFILES/zsh/lazy.zsh
+# try_source $DOTFILES/zsh/lazy.zsh
+try_source $DOTFILES/zsh/not-lazy.zsh
 try_source_quiet $HOME/.tokens.sh
 try_source_quiet $DOTFILES/zsh/nvim-selector.zsh
+
+# zprof
