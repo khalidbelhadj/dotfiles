@@ -137,13 +137,13 @@ local new = {
 
   {
     "epwalsh/obsidian.nvim",
-    lazy = true,
-    event = {
-      -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
-      -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md"
-      "BufReadPre " .. vim.fn.expand "~" .. "/Notes/**.md",
-      "BufNewFile " .. vim.fn.expand "~" .. "/Notes/**.md",
-    },
+    lazy = false,
+    -- event = {
+    --   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
+    --   -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md"
+    --   "BufReadPre " .. vim.fn.expand "~" .. "/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/**.md",
+    --   "BufNewFile " .. vim.fn.expand "~" .. "/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/**.md",
+    -- },
     dependencies = {
       -- Required.
       "nvim-lua/plenary.nvim",
@@ -154,7 +154,7 @@ local new = {
       workspaces = {
         {
           name = "personal",
-          path = "~/Notes/",
+          path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault",
         },
       },
       -- see below for full list of options 👇

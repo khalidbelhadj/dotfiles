@@ -65,7 +65,8 @@ M.harpoon = {
 
 M.lspconfig = {
   n = {
-    ["gh"] = { "<cmd> lua vim.diagnostic.open_float { border = 'rounded' } <CR>", "Floating diagnostic" },
+    ["gh"] = { "<cmd> lua vim.diagnostic.open_float() <CR>", "Floating diagnostic" },
+    -- ["gh"] = { "<cmd> lua vim.diagnostic.open_float { border = 'rounded' } <CR>", "Floating diagnostic" },
     ["<C-w>d"] = { "<cmd> vert winc ] <CR>", "Go to definition vsplit" },
   },
 }

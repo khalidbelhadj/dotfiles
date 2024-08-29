@@ -1,5 +1,5 @@
 # export NVIM_APPNAME="LazyVim"
-export NVIM_APPNAME="nvchad"
+export NVIM_APPNAME="nvim"
 
 function nvims() {
   items=("nvim" "LazyVim" "nvim-personal" "default" "nvchad")

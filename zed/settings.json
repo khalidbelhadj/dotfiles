@@ -7,6 +7,26 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "file_scan_exclusions": [
+    "node_modules"
+  ],
+  "languages": {
+    "TSX": {
+      "format_on_save": "on"
+    },
+    "TypeScript": {
+      "format_on_save": "on"
+    },
+    "JSX": {
+      "format_on_save": "on"
+    },
+    "JavaScript": {
+      "format_on_save": "on"
+    },
+    "Rust": {
+      "format_on_save": "on"
+    }
+  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -25,25 +45,25 @@
   },
   "assistant": {
     "button": false,
-    "version": "1"
+    "version": "2"
   },
   "collaboration_panel": {
     "button": false
   },
   "chat_panel": {
-    "button": false
+    "button": true
   },
   "ui_font_size": 14,
   "buffer_font_size": 12,
   "ui_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font",
   "buffer_line_height": "comfortable",
   "toolbar": {
-    "breadcrumbs": false,
+    "breadcrumbs": true,
     "quick_actions": false
   },
-  "show_whitespaces": "all",
+  "show_whitespaces": "selection",
   "gutter": {
-    "code_actions": false
+    "code_actions": true
   }
 }

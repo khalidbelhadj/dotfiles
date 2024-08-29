@@ -4,19 +4,20 @@
 
 local M = {}
 
+
 ---@type Base46HLGroupsList
 M.override = {
   Comment = {
     italic = true,
   },
   -- Only apply to the fleet theme
-  Macro = { fg = "green" },
   ["@function"] = { fg="yellow",  italic = true, bold = true },
   ["@function.call"] = { fg="yellow",  italic = true, bold = true },
   ["@method.call"] = { fg="yellow",  italic = true, bold = true },
   ["@type.builtin"] = { fg="blue",  italic = true, bold = false },
   ["@variable"] = { fg="white",  italic = true, bold = false },
   ["@character"] = { fg="pink",  italic = true },
+  NormalFloat = { bg = "darker_black" },
   IndentBlanklineContextStart = { bg = "lighter_black" },
   NvimTreeGitDirty = { fg = "yellow"},
   NvimTreeGitNew = { fg = "green"},
@@ -24,7 +25,7 @@ M.override = {
   NvimTreeGitDeleted = { fg = "red"},
   Tag = { fg = "cyan"},
   Type = { fg = "blue", italic=true},
-  Macro = {fg = "green"},
+  Macro = { fg = "green" },
   Repeat = {fg = "blue"},
   DevIconpy = {fg = "yellow"},
 }

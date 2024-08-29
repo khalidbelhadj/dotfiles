@@ -1,5 +1,5 @@
 # Figured out name of the app by running `osascript -e 'id of app "Zed"'`
-TEXT_EDITOR="dev.zed.Zed"
+TEXT_EDITOR="com.microsoft.VSCode"
 
 duti -s $TEXT_EDITOR public.json all
 duti -s $TEXT_EDITOR public.plain-text all

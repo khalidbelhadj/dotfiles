@@ -37,6 +37,7 @@ M.ui = {
   },
 
   statusline = {
+    theme = "default"
     --   overriden_modules = function(modules)
     --     table.insert(
     --       modules,

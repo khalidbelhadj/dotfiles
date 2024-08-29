@@ -49,3 +49,5 @@ try_source_quiet $HOME/.tokens.sh
 try_source_quiet $DOTFILES/zsh/nvim-selector.zsh
 
 # zprof
+export MODULAR_HOME="/Users/khalid/.modular"
+export PATH="/Users/khalid/.modular/pkg/packages.modular.com_mojo/bin:$PATH"

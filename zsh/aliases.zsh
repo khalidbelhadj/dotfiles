@@ -18,6 +18,7 @@ alias u="cd .."
 alias chrome="open -a 'Google Chrome'"
 alias cls="clear"
 alias rm="rm -i"
+alias pn="pnpm"
 
 function zoxide_and_nvim() {
   z "$1" && nvim
