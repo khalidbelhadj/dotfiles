@@ -1,4 +1,4 @@
-# zmodload zsh/zprof
+zmodload zsh/zprof
 
 if [ -d "/opt/homebrew/" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"

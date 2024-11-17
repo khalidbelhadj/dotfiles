@@ -37,26 +37,32 @@ return {
       })
     end
   },
+
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.6',
     dependencies = { 'nvim-lua/plenary.nvim' },
     cmd = "Telescope",
-    init = function(_, opts)
+    init = function(_, _)
       map({ "n", "v" }, "<leader>ff", "<cmd> Telescope find_files <CR>", {})
       map({ "n", "v" }, "<leader>fR", "<cmd> Telescope oldfiles <CR>", {})
+      map({ "n", "v" }, "<leader>fb", "<cmd> Telescope buffers <CR>", {})
       map({ "n", "v" }, "<leader>fr", function() require('telescope.builtin').oldfiles({ only_cwd = true }) end, {})
+      map({ "n", "v" }, "<leader>fw", "<cmd> Telescope live_grep <CR>", {})
     end,
   },
+
   {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
-    config = function(_, opts)
+    config = function(_, _)
       vim.cmd('colorscheme catppuccin-macchiato')
     end
   },
+
   { "rose-pine/neovim", name = "rose-pine" },
+
   {
     "williamboman/mason.nvim",
     cmd = { "Mason", "MasonUpdate", "MasonInstall", "MasonUninstall", "MasonUninstallAll", "MasonLog" },
@@ -64,9 +70,11 @@ return {
       require("mason").setup()
     end,
   },
+
   {
     "neovim/nvim-lspconfig",
   },
+
   {
     "williamboman/mason-lspconfig.nvim",
     dependencies = {
@@ -74,11 +82,13 @@ return {
       "neovim/nvim-lspconfig",
     },
     config = function()
-      local on_attach = function(client, bufnr)
+      local on_attach = function(_, _)
         map("n", "K", function() vim.lsp.buf.hover() end, {})
         map("n", "gh", function() vim.diagnostic.open_float() end, {})
         map("n", "gd", function() vim.lsp.buf.definition() end, {})
-        map("n", "ca", function() vim.lsp.buf.code_action() end, {})
+        map("n", "gr", function() vim.lsp.buf.references() end, {})
+        map("n", "<leader>lr", function() vim.lsp.buf.rename() end, {})
+        map("n", "<leader>la", function() vim.lsp.buf.code_action() end, {})
         map("n", "<leader>lf", function() vim.lsp.buf.format() end, {})
         map("n", "<leader>ls",
           function()
@@ -142,6 +152,7 @@ return {
       })
     end
   },
+
   -- {
   --   "L3MON4D3/LuaSnip",
   --   -- follow latest release.
@@ -149,10 +160,12 @@ return {
   --   -- install jsregexp (optional!).
   --   build = "make install_jsregexp"
   -- },
+
   {
     "hrsh7th/cmp-nvim-lsp",
     lazy = false
   },
+
   {
     "hrsh7th/nvim-cmp",
     lazy = false,
@@ -187,18 +200,20 @@ return {
           { name = 'buffer' },
         }),
         formatting = {
-          format = function(entry, vim_item)
-            vim_item.abbr = string.sub(vim_item.abbr, 1, 10)
+          format = function(_, vim_item)
+            vim_item.abbr = string.sub(vim_item.abbr, 1, 20)
             return vim_item
           end,
         },
       })
     end
   },
+
   {
     "felipeagc/fleet-theme-nvim",
     config = function() vim.cmd("colorscheme fleet") end
   },
+
   -- {
   --   "lukas-reineke/indent-blankline.nvim",
   --   lazy = false,
@@ -208,6 +223,7 @@ return {
   --     }
   --   end
   -- }
+
   {
     "j-hui/fidget.nvim",
     lazy = false,

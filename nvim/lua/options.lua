@@ -38,6 +38,8 @@ opt.splitright = true
 opt.termguicolors = true
 opt.timeoutlen = 400
 opt.undofile = true
+opt.formatoptions = opt.formatoptions - "cro"
+opt.wrap = false
 
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
