@@ -6,6 +6,7 @@ return {
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     build = ":TSUpdate",
     init = function()
+
       local ask_install = {}
       function _G.ensure_treesitter_language_installed()
         local parsers = require "nvim-treesitter.parsers"
@@ -229,6 +230,14 @@ return {
     lazy = false,
     config = function()
       require("fidget").setup()
+    end
+  },
+
+  {
+    "lewis6991/gitsigns.nvim",
+    lazy = false,
+    config = function()
+      require('gitsigns').setup()
     end
   }
 }
