@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Figured out name of the app by running `osascript -e 'id of app "Zed"'`
 TEXT_EDITOR="com.microsoft.VSCode"
 
