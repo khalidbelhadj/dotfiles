@@ -1,0 +1,2 @@
+$DOTFILES/emacs/early-init.el=$HOME/.config/emacs/early-init.el
+$DOTFILES/emacs/init.el=$HOME/.config/emacs/init.el

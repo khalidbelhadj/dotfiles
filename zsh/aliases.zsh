@@ -1,5 +1,5 @@
-alias ls="exa -lh --sort type"
-alias la="exa -lah --icons --sort type"
+# alias ls="exa -lh --sort type"
+# alias la="exa -lah --icons --sort type"
 alias nv="nvim"
 alias config="cd ~/.config/"
 alias c="clear"

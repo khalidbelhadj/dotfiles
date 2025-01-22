@@ -1,4 +1,3 @@
-install/brew-install.sh
 **/.DS_Store
 zed/.tmp*
 zed/embeddings
