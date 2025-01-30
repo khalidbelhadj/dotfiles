@@ -1,4 +1,4 @@
-zmodload zsh/zprof
+zmodload zsh/zprof # Run zprof to see profiler results
 
 if [ -d "/opt/homebrew/" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -51,3 +51,4 @@ try_source_quiet $DOTFILES/zsh/nvim-selector.zsh
 # zprof
 export MODULAR_HOME="/Users/khalid/.modular"
 export PATH="/Users/khalid/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
+

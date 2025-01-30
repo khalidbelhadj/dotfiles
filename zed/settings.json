@@ -31,7 +31,7 @@
     "diagnostics": false,
     "metrics": false
   },
-  "theme": "Fleet Dark",
+  "theme": "One Dark",
   "remove_trailing_whitespace_on_save": true,
   "project_panel": {
     "dock": "left"

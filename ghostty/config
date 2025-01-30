@@ -1,6 +1,8 @@
 theme = Dark+
-foreground = fcfcfc
-font-family = JetBrainsMono NF
-font-feature = -calt 
+foreground = ffffff
+font-family = JetBrainsMono NF Regular
+font-feature = -calt
+font-thicken = true
 cursor-style = block
 shell-integration-features = no-cursor
+

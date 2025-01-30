@@ -43,7 +43,7 @@ gh() {
 
 # JavaScript
 
-load-javascript() {
+load-node() {
   # pnpm
   export PNPM_HOME="/Users/khalidbelhadj/Library/pnpm"
   case ":$PATH:" in
@@ -65,31 +65,31 @@ load-javascript() {
 
 nvm() {
   unset -f nvm
-  load-javascript
+  load-node
   nvm "$@"
 }
 
 node() {
   unset -f node
-  load-javascript
+  load-node
   node "$@"
 }
 
 npm() {
   unset -f npm
-  load-javascript
+  load-node
   npm "$@"
 }
 
 pnpm() {
   unset -f pnpm
-  load-javascript
+  load-node
   pnpm "$@"
 }
 
 bun() {
   unset -f bun
-  load-javascript
+  load-node
   bun "$@"
 }
 
