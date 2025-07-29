@@ -52,3 +52,5 @@ try_source_quiet $DOTFILES/zsh/nvim-selector.zsh
 export MODULAR_HOME="/Users/khalid/.modular"
 export PATH="/Users/khalid/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
 
+# bun completions
+[ -s "/Users/khalid/.bun/_bun" ] && source "/Users/khalid/.bun/_bun"

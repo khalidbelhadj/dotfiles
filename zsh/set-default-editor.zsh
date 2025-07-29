@@ -30,6 +30,7 @@ duti -s $TEXT_EDITOR .md all
 duti -s $TEXT_EDITOR .php all
 duti -s $TEXT_EDITOR .pl all
 duti -s $TEXT_EDITOR .py all
+duti -s $TEXT_EDITOR .ipynb all
 duti -s $TEXT_EDITOR .rb all
 duti -s $TEXT_EDITOR .ts all
 duti -s $TEXT_EDITOR .tsx all
@@ -42,3 +43,4 @@ duti -s $TEXT_EDITOR .c all
 duti -s $TEXT_EDITOR .cpp all
 duti -s $TEXT_EDITOR .hpp all
 duti -s $TEXT_EDITOR .h all
+duti -s $TEXT_EDITOR .tex all

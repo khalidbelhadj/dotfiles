@@ -5,7 +5,7 @@
 
 ;; Setting font
 (set-face-attribute 'default nil
-                    :family "JetBrainsMono Nerd Font"
+                    :family "JetBrainsMono NF"
                     :height 130)
 
 (add-hook 'focus-out-hook 'garbage-collect)
@@ -46,14 +46,17 @@
       auto-window-vscroll                   nil
       load-prefer-newer                     t
       c-basic-offset                        4
-      custom-file                           (expand-file-name "custom.el" user-emacs-directory))
+      custom-file                           (expand-file-name "custom.el" user-emacs-directory)
+      dired-listing-switches                "-alh"
+      compile-command                       "g++ -Wall -Wextra -g -o main main.cpp"
+      )
 
 ;; Enabling and disabling default modes
 (scroll-bar-mode                 -1)
 (tool-bar-mode                   -1)
 (auto-revert-mode                 1)
 (global-auto-revert-mode          1)
-(electric-pair-mode               1)
+;; (electric-pair-mode               1)
 (display-battery-mode             1)
 (global-visual-line-mode          1)
 (global-display-line-numbers-mode 1)

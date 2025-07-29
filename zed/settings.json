@@ -7,9 +7,10 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "file_scan_exclusions": [
-    "node_modules"
-  ],
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "file_scan_exclusions": ["node_modules"],
   "languages": {
     "TSX": {
       "format_on_save": "on"
@@ -25,6 +26,12 @@
     },
     "Rust": {
       "format_on_save": "on"
+    },
+    "C++": {
+      "format_on_save": "on"
+    },
+    "C": {
+      "format_on_save": "on"
     }
   },
   "telemetry": {
@@ -34,7 +41,8 @@
   "theme": "One Dark",
   "remove_trailing_whitespace_on_save": true,
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
+    "auto_reveal_entries": false
   },
   "base_keymap": "VSCode",
   "vim_mode": true,
@@ -43,15 +51,16 @@
     "show": "system",
     "git_diff": true
   },
-  "assistant": {
-    "button": false,
-    "version": "2"
+  "agent": {
+    "version": "1",
+    "button": true
+    // "version": "2"
   },
   "collaboration_panel": {
     "button": false
   },
   "chat_panel": {
-    "button": true
+    "button": "always"
   },
   "ui_font_size": 14,
   "buffer_font_size": 12,
@@ -59,11 +68,12 @@
   "buffer_font_family": "JetBrainsMonoNL Nerd Font",
   "buffer_line_height": "comfortable",
   "toolbar": {
-    "breadcrumbs": true,
+    "breadcrumbs": false,
     "quick_actions": false
   },
-  "show_whitespaces": "selection",
-  "gutter": {
-    "code_actions": true
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "show_diagnostics": "all"
   }
 }

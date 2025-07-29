@@ -45,7 +45,7 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     cmd = "Telescope",
     init = function(_, _)
-      map({ "n", "v" }, "<leader>ff", "<cmd> Telescope find_files <CR>", {})
+      map({ "n", "v" }, "<leader>ff", "<cmd> Telescope find_files theme=ivy <CR>", {})
       map({ "n", "v" }, "<leader>fR", "<cmd> Telescope oldfiles <CR>", {})
       map({ "n", "v" }, "<leader>fb", "<cmd> Telescope buffers <CR>", {})
       map({ "n", "v" }, "<leader>fr", function() require('telescope.builtin').oldfiles({ only_cwd = true }) end, {})
@@ -63,6 +63,7 @@ return {
   },
 
   { "rose-pine/neovim", name = "rose-pine" },
+  { "EdenEast/nightfox.nvim" },
 
   {
     "williamboman/mason.nvim",
